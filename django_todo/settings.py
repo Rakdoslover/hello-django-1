@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-a++2^pcmtbzm%=6lfb@8^9ss6ej_bexc4q@', \
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-rakdoslover-hello-django-iazo2clzat.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['rakdoslover-todo-app.herokuapp.com']
 
 
 # Application definition
