@@ -3,8 +3,7 @@ import os
 import dj_database_url
 import env
 
-if os.path.isfile("env.py"):
-    inport env
+
 """
 Django settings for django_todo project.
 
