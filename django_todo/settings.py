@@ -1,9 +1,3 @@
-from pathlib import Path
-import os
-import dj_database_url
-import env
-
-
 """
 Django settings for django_todo project.
 
@@ -16,7 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,13 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-a++2^pcmtbzm%=6lfb@8^9ss6ej_bexc4q@', \
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-a++2^pcmtbzm%=6lfb@8^9ss6ej_bexc4q@', \
     '6usr4sh70oz14sq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rakdoslover-todo-app.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
